@@ -1,1 +1,30 @@
-
+{
+    "parameters_out":{
+        "user":{
+            "login":"Insert_your_login",
+            "password":"Insert_your_password"
+        },
+        "command":"AddCard",
+        "optional":{
+            "board_id":"256063992",
+            "position":"1",
+            "lane_id":"256129213"
+        },
+        "url":"Insert_your_hostname"
+    },
+    "connector_out":"Leankit Kanban, v1.0",
+    "parameters_in":{
+        "api_method":"deals/1",
+        "api_token":"Insert_your_api_token",
+        "http_metod":"GET",
+        "url":"https://api.pipedrive.com/v1/",
+        "error_codes":[
+            501,
+            401
+        ],
+        "rest_data":{}
+    },
+    "connector_in":"Pipedrive, v1.0",
+    "new_mapper":"out_dict = {\r\n    'Title': in_dict.get('data').get('title'),\r\n    'TypeId': 256045332\r\n}",
+    "name":"Pipedrive_process_2"
+}
